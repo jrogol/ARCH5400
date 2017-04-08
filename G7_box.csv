@@ -1,0 +1,95 @@
+,Inn,Score,Out,RoB,Pit(cnt),R/O,@Bat,Batter,Pitcher,wWPA,wWE,Play Description
+1,t1,0-0,0.0,---,"4,(2-1)?CBBX",R,CHC,Dexter?Fowler,Corey?Kluber,9%,59%,Home Run (Fly Ball)
+2,t1,1-0,0.0,---,"4,(1-2)?BFCX",,CHC,Kyle?Schwarber,Corey?Kluber,3%,62%,Single to SS (Ground Ball)
+3,t1,1-0,0.0,1--,"6,(3-2)?SSB*BBX",O,CHC,Kris?Bryant,Corey?Kluber,-3%,59%,Flyball: RF
+4,t1,1-0,1.0,1--,"2,(1-0)?BX",O,CHC,Anthony?Rizzo,Corey?Kluber,-3%,57%,Flyball: CF
+5,t1,1-0,2.0,1--,"1,(0-0)?>C",,CHC,Ben?Zobrist,Corey?Kluber,1%,57%,Schwarber Steals 2B
+6,t1,1-0,2.0,-2-,"3,(1-1)?>C.*BX",O,CHC,Ben?Zobrist,Corey?Kluber,-3%,54%,Flyball: RF
+9,b1,0-1,0.0,---,"1,(0-0)?X",O,CLE,Carlos?Santana,Kyle?Hendricks,2%,57%,Lineout: RF
+10,b1,0-1,1.0,---,"4,(1-2)?CFBS",O,CLE,Jason?Kipnis,Kyle?Hendricks,2%,59%,Strikeout Swinging
+11,b1,0-1,2.0,---,"2,(0-1)?CX",,CLE,Francisco?Lindor,Kyle?Hendricks,-1%,57%,Reached on E4 (throw) (Ground Ball)
+12,b1,0-1,2.0,1--,"2,(0-1)?CX",O,CLE,Mike?Napoli,Kyle?Hendricks,2%,60%,Groundout: SS-2B/Forceout at 2B
+15,t2,1-0,0.0,---,"4,(2-1)?FBBX",O,CHC,Addison?Russell,Corey?Kluber,-2%,57%,Popfly: SS
+16,t2,1-0,1.0,---,"2,(0-1)?CX",O,CHC,Willson?Contreras,Corey?Kluber,-2%,56%,Foul Flyball: RF (RF Foul)
+17,t2,1-0,2.0,---,"1,(0-0)?X",O,CHC,Jason?Heyward,Corey?Kluber,-1%,55%,Popfly: SS
+20,b2,0-1,0.0,---,"6,(3-2)?BCBBCX",,CLE,Jose?Ramirez,Kyle?Hendricks,-4%,51%,Single to P (Line Drive)
+21,b2,0-1,0.0,1--,"2,(1-1)?BF11",O,CLE,Lonnie?Chisenhall,Kyle?Hendricks,7%,57%,Ramirez Picked off 1B (P-1B)
+22,b2,0-1,1.0,---,"3,(1-1)?BF11.X",,CLE,Lonnie?Chisenhall,Kyle?Hendricks,-3%,55%,Single to LF (Line Drive)
+23,b2,0-1,1.0,1--,"1,(0-0)?X",OO,CLE,Rajai?Davis,Kyle?Hendricks,6%,60%,Ground Ball Double Play: 3B-2B-1B
+26,t3,1-0,0.0,---,"3,(1-1)?FBX",O,CHC,Javier?Baez,Corey?Kluber,-2%,58%,Flyball: LF
+27,t3,1-0,1.0,---,"1,(0-0)?X",O,CHC,Dexter?Fowler,Corey?Kluber,-2%,56%,Lineout: RF
+28,t3,1-0,2.0,---,"2,(1-0)?BX",O,CHC,Kyle?Schwarber,Corey?Kluber,-1%,55%,Single to RF (Line Drive); Schwarber out at 2B/RF-SS
+31,b3,0-1,0.0,---,"3,(1-1)?CBX",,CLE,Coco?Crisp,Kyle?Hendricks,-7%,48%,Double to LF (Line Drive)
+32,b3,0-1,0.0,-2-,"2,(1-0)?BX",O,CLE,Roberto?Perez,Kyle?Hendricks,2%,50%,Bunt Groundout: 1B-2B/Sacrifice; Crisp to 3B
+33,b3,0-1,1.0,--3,"2,(1-0)?B+3X",R,CLE,Carlos?Santana,Kyle?Hendricks,-6%,44%,Single to RF (Line Drive); Crisp Scores
+34,b3,1-1,1.0,1--,"5,(2-2)?BF1BFX",,CLE,Jason?Kipnis,Kyle?Hendricks,-4%,40%,Fielder's Choice SS; Santana to 2B/Safe on E4 (catch); Kipnis to 1B
+35,b3,1-1,1.0,12-,"5,(3-1)?BBBFX",O,CLE,Francisco?Lindor,Kyle?Hendricks,5%,45%,Flyball: LF
+36,b3,1-1,2.0,12-,"4,(1-2)?CFBX",O,CLE,Mike?Napoli,Kyle?Hendricks,5%,50%,Lineout: 3B
+39,t4,1-1,0.0,---,"8,(3-2)?BCBFFBFX",,CHC,Kris?Bryant,Corey?Kluber,4%,54%,Single to LF (Ground Ball)
+40,t4,1-1,0.0,1--,"3,(0-2)?FF1H",,CHC,Anthony?Rizzo,Corey?Kluber,6%,60%,Hit By Pitch; Bryant to 2B
+41,t4,1-1,0.0,12-,"1,(0-0)?X",O,CHC,Ben?Zobrist,Corey?Kluber,-3%,57%,Groundout: 1B-SS/Forceout at 2B; Bryant to 3B
+42,t4,1-1,1.0,1-3,"1,(0-0)?X",RO,CHC,Addison?Russell,Corey?Kluber,2%,60%,Flyball: CF/Sacrifice Fly; Bryant Scores; Zobrist to 2B/Adv on throw
+43,t4,2-1,2.0,-2-,"5,(2-2)?*BFBSX",R,CHC,Willson?Contreras,Corey?Kluber,11%,70%,Double to CF (Fly Ball); Zobrist Scores
+44,t4,3-1,2.0,-2-,"6,(3-2)?BCBBFX",O,CHC,Jason?Heyward,Corey?Kluber,-3%,67%,Popfly: SS
+47,b4,1-3,0.0,---,"4,(1-2)?BCSX",O,CLE,Jose?Ramirez,Kyle?Hendricks,3%,70%,Groundout: 1B-P
+48,b4,1-3,1.0,---,"3,(0-2)?CCX",O,CLE,Lonnie?Chisenhall,Kyle?Hendricks,2%,72%,Flyball: LF
+49,b4,1-3,2.0,---,"3,(0-2)?CFX",O,CLE,Rajai?Davis,Kyle?Hendricks,1%,74%,Lineout: RF
+52,t5,3-1,0.0,---,"1,(0-0)?X",R,CHC,Javier?Baez,Corey?Kluber,8%,82%,Home Run (Fly Ball to CF-RF)
+54,t5,4-1,0.0,---,"4,(1-2)?.BFCX",,CHC,Dexter?Fowler,Andrew?Miller,2%,84%,Single to LF (Ground Ball)
+55,t5,4-1,0.0,1--,"1,(0-0)?X",OO,CHC,Kyle?Schwarber,Andrew?Miller,-4%,80%,Ground Ball Double Play: SS-2B-1B
+56,t5,4-1,2.0,---,"9,(3-2)?BSBFBFFFB",,CHC,Kris?Bryant,Andrew?Miller,1%,81%,Walk
+57,t5,4-1,2.0,1--,"4,(1-2)?BSF>X",R,CHC,Anthony?Rizzo,Andrew?Miller,7%,88%,Single to RF (Line Drive); Bryant Scores; Rizzo to 2B/Adv on throw
+58,t5,5-1,2.0,-2-,"2,(0-1)?CX",O,CHC,Ben?Zobrist,Andrew?Miller,-1%,86%,Lineout: CF
+61,b5,1-5,0.0,---,"2,(0-1)?CX",O,CLE,Coco?Crisp,Kyle?Hendricks,2%,88%,Groundout: 2B-1B
+62,b5,1-5,1.0,---,"5,(2-2)?BCBFC",O,CLE,Roberto?Perez,Kyle?Hendricks,1%,90%,Strikeout Looking
+63,b5,1-5,2.0,---,"6,(3-2)?CCBBBB",,CLE,Carlos?Santana,Kyle?Hendricks,-1%,89%,Walk
+65,b5,1-5,2.0,1--,"6,(2-2)?..BCSF*BX",,CLE,Jason?Kipnis,Jon?Lester,-3%,85%,Single to C (Ground Ball); Santana to 3B/Adv on E2 (throw); Kipnis to 2B
+66,b5,1-5,2.0,-23,"2,(0-1)?FB",RR,CLE,Francisco?Lindor,Jon?Lester,-10%,75%,Wild Pitch; Santana Scores/unER/No RBI; Kipnis Scores/unER/No RBI
+67,b5,3-5,2.0,---,"6,(3-2)?FB.SBBS",O,CLE,Francisco?Lindor,Jon?Lester,2%,77%,Strikeout Swinging
+70,t6,5-3,0.0,---,"6,(2-2)?BCSBFX",O,CHC,Addison?Russell,Andrew?Miller,-2%,75%,Foul Popfly: 1B (1B Foul)
+71,t6,5-3,1.0,---,"4,(1-2)?CFBX",R,CHC,David?Ross,Andrew?Miller,9%,84%,Home Run (Fly Ball)
+72,t6,6-3,1.0,---,"2,(1-0)?BX",O,CHC,Jason?Heyward,Andrew?Miller,-1%,83%,Groundout: 1B unassisted
+73,t6,6-3,2.0,---,"4,(0-2)?SFFS",O,CHC,Javier?Baez,Andrew?Miller,-1%,82%,Strikeout Swinging
+76,b6,3-6,0.0,---,"5,(2-2)?CBBSS",O,CLE,Mike?Napoli,Jon?Lester,3%,85%,Strikeout Swinging
+77,b6,3-6,1.0,---,"5,(2-2)?BCSBX",O,CLE,Jose?Ramirez,Jon?Lester,2%,87%,Groundout: SS-1B
+79,b6,3-6,2.0,---,"2,(1-0)?.BX",,CLE,Brandon?Guyer,Jon?Lester,-2%,85%,Single to LF (Line Drive)
+80,b6,3-6,2.0,1--,"5,(3-1)?BCBBX",O,CLE,Rajai?Davis,Jon?Lester,3%,88%,Groundout: 2B-1B
+84,t7,6-3,0.0,---,"2,(0-1)?.FX",,CHC,Dexter?Fowler,Andrew?Miller,2%,90%,Single to RF (Line Drive)
+85,t7,6-3,0.0,1--,"5,(1-2)?F1T*B1F1X",O,CHC,Kyle?Schwarber,Andrew?Miller,-2%,88%,Lineout: LF
+87,t7,6-3,1.0,1--,"6,(2-2)?.F1BF11F1B>S",OO,CHC,Kris?Bryant,Cody?Allen,-3%,86%,"Double Play: Strikeout Swinging, Fowler Caught Stealing 2B (C-2B)"
+90,b7,3-6,0.0,---,"3,(1-1)?CBX",O,CLE,Coco?Crisp,Jon?Lester,3%,89%,Flyball: LF
+91,b7,3-6,1.0,---,"7,(3-2)?CBBFBFB",,CLE,Roberto?Perez,Jon?Lester,-3%,85%,Walk
+93,b7,3-6,1.0,1--,"1,(0-0)?.X",O,CLE,Carlos?Santana,Jon?Lester,3%,88%,Groundout: P-1B; Naquin to 2B
+94,b7,3-6,2.0,-2-,"4,(1-2)?BFSS",O,CLE,Jason?Kipnis,Jon?Lester,3%,92%,Strikeout Swinging
+98,t8,6-3,0.0,---,"4,(0-2)?.CCFS",O,CHC,Anthony?Rizzo,Cody?Allen,-1%,91%,Strikeout Swinging (C-1B)
+99,t8,6-3,1.0,---,"4,(1-2)?FSBX",O,CHC,Ben?Zobrist,Cody?Allen,-1%,91%,Groundout: 1B unassisted
+100,t8,6-3,2.0,---,"3,(0-2)?CCX",O,CHC,Addison?Russell,Cody?Allen,-0%,90%,Popfly: 1B
+103,b8,3-6,0.0,---,"3,(2-0)?BBX",O,CLE,Francisco?Lindor,Jon?Lester,3%,93%,Groundout: SS-1B
+104,b8,3-6,1.0,---,"5,(2-2)?CSBBC",O,CLE,Mike?Napoli,Jon?Lester,2%,95%,Strikeout Looking
+105,b8,3-6,2.0,---,"3,(1-1)?BSX",,CLE,Jose?Ramirez,Jon?Lester,-2%,94%,Single to SS (Ground Ball)
+107,b8,3-6,2.0,1--,"7,(3-2)?.BCFBFB>X",R,CLE,Brandon?Guyer,Aroldis?Chapman,-8%,86%,Double to CF (Line Drive); Ramirez Scores
+108,b8,4-6,2.0,-2-,"7,(2-2)?BFFBFFX",RR,CLE,Rajai?Davis,Aroldis?Chapman,-39%,47%,Home Run (Line Drive); Guyer Scores
+109,b8,6-6,2.0,---,"2,(1-0)?BX",,CLE,Coco?Crisp,Aroldis?Chapman,-2%,45%,Single to LF (Ground Ball)
+110,b8,6-6,2.0,1--,"5,(2-2)?1B1BSS>S",O,CLE,Yan?Gomes,Aroldis?Chapman,5%,50%,Strikeout Swinging
+113,t9,6-6,0.0,---,"5,(3-1)?BBBCB",,CHC,David?Ross,Cody?Allen,8%,58%,Walk
+115,t9,6-6,0.0,1--,"8,(2-2)?.BBCF>FF1F11X",O,CHC,Jason?Heyward,Cody?Allen,-8%,50%,Groundout: 2B-SS/Forceout at 2B
+117,t9,6-6,1.0,1--,"5,(3-1)?.C*BBB>S",,CHC,Javier?Baez,Bryan?Shaw,17%,66%,Heyward Steals 2B; Heyward to 3B/Adv on E2 (throw)
+119,t9,6-6,1.0,--3,"6,(3-2)?.C*BBB>S...L",O,CHC,Javier?Baez,Bryan?Shaw,-19%,48%,Strikeout (foul bunt)
+120,t9,6-6,2.0,--3,"3,(2-0)?BBX",O,CHC,Dexter?Fowler,Bryan?Shaw,-13%,35%,Groundout: SS-1B
+124,b9,6-6,0.0,---,"6,(3-2)?.CBBBCX",O,CLE,Carlos?Santana,Aroldis?Chapman,6%,41%,Flyball: LF
+125,b9,6-6,1.0,---,"7,(3-2)?CBFBBFS",O,CLE,Jason?Kipnis,Aroldis?Chapman,5%,46%,Strikeout Swinging
+126,b9,6-6,2.0,---,"1,(0-0)?X",O,CLE,Francisco?Lindor,Aroldis?Chapman,4%,50%,Flyball: RF
+129,t10,6-6,0.0,---,"2,(1-0)?BX",,CHC,Kyle?Schwarber,Bryan?Shaw,8%,58%,Single to RF (Line Drive)
+131,t10,6-6,0.0,1--,"5,(2-2)?.BFFB1X",O,CHC,Kris?Bryant,Bryan?Shaw,-3%,55%,Flyball: CF; Almora to 2B
+132,t10,6-6,1.0,-2-,"4,(3-0)?IIII",,CHC,Anthony?Rizzo,Bryan?Shaw,2%,58%,Intentional Walk
+133,t10,6-6,1.0,12-,"5,(1-2)?BCCFX",R,CHC,Ben?Zobrist,Bryan?Shaw,31%,89%,Double to LF (Ground Ball); Almora Scores; Rizzo to 3B
+134,t10,7-6,1.0,-23,"4,(3-0)?IIII",,CHC,Addison?Russell,Bryan?Shaw,0%,89%,Intentional Walk
+135,t10,7-6,1.0,123,"3,(1-1)?BFX",R,CHC,Miguel?Montero,Bryan?Shaw,6%,95%,Single to LF (Ground Ball); Rizzo Scores; Zobrist to 3B; Russell to 2B
+137,t10,8-6,1.0,123,"4,(0-2)?.FSFS",O,CHC,Jason?Heyward,Trevor?Bauer,-3%,92%,Strikeout Swinging
+138,t10,8-6,2.0,123,"5,(2-2)?BSS*BX",O,CHC,Javier?Baez,Trevor?Bauer,-3%,89%,Flyball: CF
+142,b10,6-8,0.0,---,"5,(2-2)?..CBFBS",O,CLE,Mike?Napoli,Carl?Edwards,5%,95%,Strikeout Swinging
+143,b10,6-8,1.0,---,"5,(2-2)?CFBBX",O,CLE,Jose?Ramirez,Carl?Edwards,3%,98%,Groundout: SS-1B
+144,b10,6-8,2.0,---,"5,(3-1)?BBBCB",,CLE,Brandon?Guyer,Carl?Edwards,-3%,95%,Walk
+145,b10,6-8,2.0,1--,"1,(0-0)?>B",,CLE,Rajai?Davis,Carl?Edwards,-0%,95%,Defensive Indifference; Guyer to 2B
+146,b10,6-8,2.0,-2-,"2,(1-0)?>B.X",R,CLE,Rajai?Davis,Carl?Edwards,-5%,89%,Single to CF (Line Drive); Guyer Scores
+148,b10,7-8,2.0,1--,"2,(0-1)?.CX",O,CLE,Michael?Martinez,Mike?Montgomery,11%,100%,Groundout: 3B-1B
