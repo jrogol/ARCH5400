@@ -3,7 +3,7 @@
 
 initial_link = "https://www.theguardian.com/sport/live/2016/nov/02/world-series-2016-game-7-chicago-cubs-cleveland-indians-live"
 
-
+import datetime
 def getLinks(link):
     from bs4 import BeautifulSoup
     import urllib.request as url
@@ -58,10 +58,15 @@ def guardian_parser(links):
     return data
 
 blog = guardian_parser(links)
-blog
+
 
 df = pd.DataFrame(blog, columns=['timestamp','header','text'])
-df.timestamp
-
-
-type(keyEvents[0].find('time')['datetime'])
+# Convert to a proper time stamp
+df['timestamp']=pd.to_datetime(df['timestamp'])
+# Convert to EST, as Game 7 was played in Cleveland
+df['timestamp']=df['timestamp']-datetime.timedelta(hours=4)
+# Sort by date
+df.sort_values(by='timestamp', inplace=True)
+# Sanity Check
+df
+df.to_csv("blog.csv")
