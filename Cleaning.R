@@ -42,12 +42,18 @@ unique.users <- clean %>%
   unique %>%
   arrange(desc(users))
 
+top_topics <- clean %>% 
+  group_by(lang.topic) %>% 
+  count %>%
+  arrange(desc(n))
+
 # Summarize the data by tweets per topic, by minute
 tweets_by_time <- clean %>%
   left_join(unique.users) %>%
   group_by(time, lang.topic) %>%
   mutate(tpu = n()/users, tweets = n()) %>%
-  select(time, lang.topic, tweets, tpu)
+  select(time, lang.topic, tweets, tpu) %>%
+  filter(lang.topic %in% top_topics$lang.topic[1:20])
 
 write_csv(tweets_by_time, "Data/tweets_by_time.csv")
 #### Blog Wrangling ####
@@ -60,7 +66,8 @@ blog <- read_csv("Data Collection/all_blog.csv")
 blog.clean <- blog %>%
   mutate(time = round_date(ymd_hms(timestamp,tz = "America/New_York"), unit = "minute"),
          cst = with_tz(time, tz="America/Chicago")) %>% 
-  select(cst, header, text)
+  select(cst, header, text) %>%
+  mutate(cst = as.POSIXct(cst))
 
 write_csv(blog.clean, "Data/blog_clean.csv")
 
@@ -70,6 +77,14 @@ write_csv(blog.clean, "Data/blog_clean.csv")
 library(readr)
 
 keyevents <- read_csv("Data Collection/blog.csv")
+key.clean <- keyevents %>%
+  mutate(time = round_date(ymd_hms(timestamp,tz = "America/New_York"), unit = "minute"),
+                              cst = with_tz(time, tz="America/Chicago")) %>% 
+  select(cst, header, text) %>%
+  mutate(cst = as.POSIXct(cst))
+
+write_tsv(key.clean,"Data/clean_key.tsv")
+
 box_score <- read_csv("Data Collection/G7_box.csv")
 names(box_score) <- gsub("@","at",names(box_score))
 names(box_score) <- gsub("[(].+[)]","",names(box_score))
