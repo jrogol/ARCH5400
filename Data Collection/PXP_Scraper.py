@@ -4,6 +4,7 @@
 initial_link = "https://www.theguardian.com/sport/live/2016/nov/02/world-series-2016-game-7-chicago-cubs-cleveland-indians-live"
 
 import datetime
+import pandas as pd
 def getLinks(link):
     from bs4 import BeautifulSoup
     import urllib.request as url
@@ -27,7 +28,6 @@ def getLinks(link):
 links = getLinks(initial_link)
 # Add the original link
 links.append(initial_link)
-test
 
 def guardian_parser(links):
     from bs4 import BeautifulSoup
@@ -45,12 +45,15 @@ def guardian_parser(links):
         page = url.urlopen(req)
         soup = BeautifulSoup(page,"html5lib")
         # Look for the div elements that are key events
-        patt = re.compile("is-key-event")
+        patt = re.compile("block block--content")
         keyEvents = soup.article.findAll('div', attrs={'class':patt})
         # Iterate over the keyEvents, extract the necessary data and add it to the data list
         for event in keyEvents:
             date = event.find('time')['datetime']
-            head = event.find('h2').text
+            try:
+                head = event.find('h2').text
+            except:
+                head = ''
             content = event.find('div', attrs={'itemprop':'articleBody'}).text.strip()
             e = [date,head,content]
             data.append(e)
@@ -69,4 +72,16 @@ df['timestamp']=df['timestamp']-datetime.timedelta(hours=4)
 df.sort_values(by='timestamp', inplace=True)
 # Sanity Check
 df
-df.to_csv("blog.csv")
+df.to_csv("all_blog.csv")
+
+
+
+df['text'][30].split('\n')[0]
+
+pd.DataFrame(df[df['header'] == '']['text'].map(lambda x: x.split('\n',1)[0]))
+df[df['header'] == '']['text'].str.split('\n',1, expand = True)
+
+
+df
+
+df['header'][31] == ''

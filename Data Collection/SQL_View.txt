@@ -1,0 +1,16 @@
+DROP VIEW IF EXISTS recast;
+
+CREATE VIEW recast AS (
+WITH casted AS(
+  SELECT timezone('America/Chicago',CAST(created_at as timestamptz)) as tz, source, text, text_lang,
+       user_id,user_handle, user_lang
+FROM chicago_city_primary
+WHERE source ILIKE ANY(ARRAY['%for Blackberry%', '%for Android%', '%tron%',
+                       '%Foursquare%','%Instagram%','%for iOS%',
+                    '%for iPhone%','%for Windows Phone%',
+                    '%for iPad%','Twitter Web Client','%for Mac%']))
+
+SELECT user_id, tz,
+       text, text_lang, user_handle, user_lang
+FROM casted
+WHERE tz >= '2016-11-02' AND tz <='2016-11-03');
