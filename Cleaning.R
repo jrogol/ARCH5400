@@ -24,6 +24,7 @@ library(tidyverse)
 library(timeDate)
 library(lubridate)
 library(stringr)
+library(readr)
 
 ## Round to nearest minute, create language/Topics
 clean <- tweets %>% 
@@ -48,3 +49,39 @@ tweets_by_time <- clean %>%
   mutate(tpu = n()/users, tweets = n()) %>%
   select(time, lang.topic, tweets, tpu)
 
+write_csv(tweets_by_time, "Data/tweets_by_time.csv")
+#### Blog Wrangling ####
+library(readr)
+library(dplyr)
+library(lubridate)
+
+blog <- read_csv("Data Collection/all_blog.csv")
+
+blog.clean <- blog %>%
+  mutate(time = round_date(ymd_hms(timestamp,tz = "America/New_York"), unit = "minute"),
+         cst = with_tz(time, tz="America/Chicago")) %>% 
+  select(cst, header, text)
+
+write_csv(blog.clean, "Data/blog_clean.csv")
+
+
+
+#### Box Score Wrangling ####
+library(readr)
+
+keyevents <- read_csv("Data Collection/blog.csv")
+box_score <- read_csv("Data Collection/G7_box.csv")
+names(box_score) <- gsub("@","at",names(box_score))
+names(box_score) <- gsub("[(].+[)]","",names(box_score))
+
+
+clean.box <- box_score %>%
+  select(Inn, Score, atBat, Batter, Pitcher, wWPA, wWE, `Play Description`) %>%
+  mutate(Batter = gsub("[?]"," ", Batter),
+         Pitcher = gsub("[?]"," ", Pitcher),
+         Inn = gsub("t","Top ", Inn),
+         Inn = gsub("b","Bottom ", Inn),
+         wWPA = as.numeric(sub("%","",wWPA))
+         )
+
+write_csv(clean.box,"Data/clean_box.csv")

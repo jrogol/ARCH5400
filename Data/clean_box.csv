@@ -1,0 +1,95 @@
+Inn,Score,atBat,Batter,Pitcher,wWPA,wWE,Play Description
+Top 1,0-0,CHC,Dexter Fowler,Corey Kluber,9,59,Home Run (Fly Ball)
+Top 1,1-0,CHC,Kyle Schwarber,Corey Kluber,3,62,Single to SS (Ground Ball)
+Top 1,1-0,CHC,Kris Bryant,Corey Kluber,-3,59,Flyball: RF
+Top 1,1-0,CHC,Anthony Rizzo,Corey Kluber,-3,57,Flyball: CF
+Top 1,1-0,CHC,Ben Zobrist,Corey Kluber,1,57,Schwarber Steals 2B
+Top 1,1-0,CHC,Ben Zobrist,Corey Kluber,-3,54,Flyball: RF
+Bottom 1,0-1,CLE,Carlos Santana,Kyle Hendricks,2,57,Lineout: RF
+Bottom 1,0-1,CLE,Jason Kipnis,Kyle Hendricks,2,59,Strikeout Swinging
+Bottom 1,0-1,CLE,Francisco Lindor,Kyle Hendricks,-1,57,Reached on E4 (throw) (Ground Ball)
+Bottom 1,0-1,CLE,Mike Napoli,Kyle Hendricks,2,60,Groundout: SS-2B/Forceout at 2B
+Top 2,1-0,CHC,Addison Russell,Corey Kluber,-2,57,Popfly: SS
+Top 2,1-0,CHC,Willson Contreras,Corey Kluber,-2,56,Foul Flyball: RF (RF Foul)
+Top 2,1-0,CHC,Jason Heyward,Corey Kluber,-1,55,Popfly: SS
+Bottom 2,0-1,CLE,Jose Ramirez,Kyle Hendricks,-4,51,Single to P (Line Drive)
+Bottom 2,0-1,CLE,Lonnie Chisenhall,Kyle Hendricks,7,57,Ramirez Picked off 1B (P-1B)
+Bottom 2,0-1,CLE,Lonnie Chisenhall,Kyle Hendricks,-3,55,Single to LF (Line Drive)
+Bottom 2,0-1,CLE,Rajai Davis,Kyle Hendricks,6,60,Ground Ball Double Play: 3B-2B-1B
+Top 3,1-0,CHC,Javier Baez,Corey Kluber,-2,58,Flyball: LF
+Top 3,1-0,CHC,Dexter Fowler,Corey Kluber,-2,56,Lineout: RF
+Top 3,1-0,CHC,Kyle Schwarber,Corey Kluber,-1,55,Single to RF (Line Drive); Schwarber out at 2B/RF-SS
+Bottom 3,0-1,CLE,Coco Crisp,Kyle Hendricks,-7,48,Double to LF (Line Drive)
+Bottom 3,0-1,CLE,Roberto Perez,Kyle Hendricks,2,50,Bunt Groundout: 1B-2B/Sacrifice; Crisp to 3B
+Bottom 3,0-1,CLE,Carlos Santana,Kyle Hendricks,-6,44,Single to RF (Line Drive); Crisp Scores
+Bottom 3,1-1,CLE,Jason Kipnis,Kyle Hendricks,-4,40,Fielder's Choice SS; Santana to 2B/Safe on E4 (catch); Kipnis to 1B
+Bottom 3,1-1,CLE,Francisco Lindor,Kyle Hendricks,5,45,Flyball: LF
+Bottom 3,1-1,CLE,Mike Napoli,Kyle Hendricks,5,50,Lineout: 3B
+Top 4,1-1,CHC,Kris Bryant,Corey Kluber,4,54,Single to LF (Ground Ball)
+Top 4,1-1,CHC,Anthony Rizzo,Corey Kluber,6,60,Hit By Pitch; Bryant to 2B
+Top 4,1-1,CHC,Ben Zobrist,Corey Kluber,-3,57,Groundout: 1B-SS/Forceout at 2B; Bryant to 3B
+Top 4,1-1,CHC,Addison Russell,Corey Kluber,2,60,Flyball: CF/Sacrifice Fly; Bryant Scores; Zobrist to 2B/Adv on throw
+Top 4,2-1,CHC,Willson Contreras,Corey Kluber,11,70,Double to CF (Fly Ball); Zobrist Scores
+Top 4,3-1,CHC,Jason Heyward,Corey Kluber,-3,67,Popfly: SS
+Bottom 4,1-3,CLE,Jose Ramirez,Kyle Hendricks,3,70,Groundout: 1B-P
+Bottom 4,1-3,CLE,Lonnie Chisenhall,Kyle Hendricks,2,72,Flyball: LF
+Bottom 4,1-3,CLE,Rajai Davis,Kyle Hendricks,1,74,Lineout: RF
+Top 5,3-1,CHC,Javier Baez,Corey Kluber,8,82,Home Run (Fly Ball to CF-RF)
+Top 5,4-1,CHC,Dexter Fowler,Andrew Miller,2,84,Single to LF (Ground Ball)
+Top 5,4-1,CHC,Kyle Schwarber,Andrew Miller,-4,80,Ground Ball Double Play: SS-2B-1B
+Top 5,4-1,CHC,Kris Bryant,Andrew Miller,1,81,Walk
+Top 5,4-1,CHC,Anthony Rizzo,Andrew Miller,7,88,Single to RF (Line Drive); Bryant Scores; Rizzo to 2B/Adv on throw
+Top 5,5-1,CHC,Ben Zobrist,Andrew Miller,-1,86,Lineout: CF
+Bottom 5,1-5,CLE,Coco Crisp,Kyle Hendricks,2,88,Groundout: 2B-1B
+Bottom 5,1-5,CLE,Roberto Perez,Kyle Hendricks,1,90,Strikeout Looking
+Bottom 5,1-5,CLE,Carlos Santana,Kyle Hendricks,-1,89,Walk
+Bottom 5,1-5,CLE,Jason Kipnis,Jon Lester,-3,85,Single to C (Ground Ball); Santana to 3B/Adv on E2 (throw); Kipnis to 2B
+Bottom 5,1-5,CLE,Francisco Lindor,Jon Lester,-10,75,Wild Pitch; Santana Scores/unER/No RBI; Kipnis Scores/unER/No RBI
+Bottom 5,3-5,CLE,Francisco Lindor,Jon Lester,2,77,Strikeout Swinging
+Top 6,5-3,CHC,Addison Russell,Andrew Miller,-2,75,Foul Popfly: 1B (1B Foul)
+Top 6,5-3,CHC,David Ross,Andrew Miller,9,84,Home Run (Fly Ball)
+Top 6,6-3,CHC,Jason Heyward,Andrew Miller,-1,83,Groundout: 1B unassisted
+Top 6,6-3,CHC,Javier Baez,Andrew Miller,-1,82,Strikeout Swinging
+Bottom 6,3-6,CLE,Mike Napoli,Jon Lester,3,85,Strikeout Swinging
+Bottom 6,3-6,CLE,Jose Ramirez,Jon Lester,2,87,Groundout: SS-1B
+Bottom 6,3-6,CLE,Brandon Guyer,Jon Lester,-2,85,Single to LF (Line Drive)
+Bottom 6,3-6,CLE,Rajai Davis,Jon Lester,3,88,Groundout: 2B-1B
+Top 7,6-3,CHC,Dexter Fowler,Andrew Miller,2,90,Single to RF (Line Drive)
+Top 7,6-3,CHC,Kyle Schwarber,Andrew Miller,-2,88,Lineout: LF
+Top 7,6-3,CHC,Kris Bryant,Cody Allen,-3,86,"Double Play: Strikeout Swinging, Fowler Caught Stealing 2B (C-2B)"
+Bottom 7,3-6,CLE,Coco Crisp,Jon Lester,3,89,Flyball: LF
+Bottom 7,3-6,CLE,Roberto Perez,Jon Lester,-3,85,Walk
+Bottom 7,3-6,CLE,Carlos Santana,Jon Lester,3,88,Groundout: P-1B; Naquin to 2B
+Bottom 7,3-6,CLE,Jason Kipnis,Jon Lester,3,92,Strikeout Swinging
+Top 8,6-3,CHC,Anthony Rizzo,Cody Allen,-1,91,Strikeout Swinging (C-1B)
+Top 8,6-3,CHC,Ben Zobrist,Cody Allen,-1,91,Groundout: 1B unassisted
+Top 8,6-3,CHC,Addison Russell,Cody Allen,0,90,Popfly: 1B
+Bottom 8,3-6,CLE,Francisco Lindor,Jon Lester,3,93,Groundout: SS-1B
+Bottom 8,3-6,CLE,Mike Napoli,Jon Lester,2,95,Strikeout Looking
+Bottom 8,3-6,CLE,Jose Ramirez,Jon Lester,-2,94,Single to SS (Ground Ball)
+Bottom 8,3-6,CLE,Brandon Guyer,Aroldis Chapman,-8,86,Double to CF (Line Drive); Ramirez Scores
+Bottom 8,4-6,CLE,Rajai Davis,Aroldis Chapman,-39,47,Home Run (Line Drive); Guyer Scores
+Bottom 8,6-6,CLE,Coco Crisp,Aroldis Chapman,-2,45,Single to LF (Ground Ball)
+Bottom 8,6-6,CLE,Yan Gomes,Aroldis Chapman,5,50,Strikeout Swinging
+Top 9,6-6,CHC,David Ross,Cody Allen,8,58,Walk
+Top 9,6-6,CHC,Jason Heyward,Cody Allen,-8,50,Groundout: 2B-SS/Forceout at 2B
+Top 9,6-6,CHC,Javier Baez,Bryan Shaw,17,66,Heyward Steals 2B; Heyward to 3B/Adv on E2 (throw)
+Top 9,6-6,CHC,Javier Baez,Bryan Shaw,-19,48,Strikeout (foul bunt)
+Top 9,6-6,CHC,Dexter Fowler,Bryan Shaw,-13,35,Groundout: SS-1B
+Bottom 9,6-6,CLE,Carlos Santana,Aroldis Chapman,6,41,Flyball: LF
+Bottom 9,6-6,CLE,Jason Kipnis,Aroldis Chapman,5,46,Strikeout Swinging
+Bottom 9,6-6,CLE,Francisco Lindor,Aroldis Chapman,4,50,Flyball: RF
+Top 10,6-6,CHC,Kyle Schwarber,Bryan Shaw,8,58,Single to RF (Line Drive)
+Top 10,6-6,CHC,Kris Bryant,Bryan Shaw,-3,55,Flyball: CF; Almora to 2B
+Top 10,6-6,CHC,Anthony Rizzo,Bryan Shaw,2,58,Intentional Walk
+Top 10,6-6,CHC,Ben Zobrist,Bryan Shaw,31,89,Double to LF (Ground Ball); Almora Scores; Rizzo to 3B
+Top 10,7-6,CHC,Addison Russell,Bryan Shaw,0,89,Intentional Walk
+Top 10,7-6,CHC,Miguel Montero,Bryan Shaw,6,95,Single to LF (Ground Ball); Rizzo Scores; Zobrist to 3B; Russell to 2B
+Top 10,8-6,CHC,Jason Heyward,Trevor Bauer,-3,92,Strikeout Swinging
+Top 10,8-6,CHC,Javier Baez,Trevor Bauer,-3,89,Flyball: CF
+Bottom 10,6-8,CLE,Mike Napoli,Carl Edwards,5,95,Strikeout Swinging
+Bottom 10,6-8,CLE,Jose Ramirez,Carl Edwards,3,98,Groundout: SS-1B
+Bottom 10,6-8,CLE,Brandon Guyer,Carl Edwards,-3,95,Walk
+Bottom 10,6-8,CLE,Rajai Davis,Carl Edwards,0,95,Defensive Indifference; Guyer to 2B
+Bottom 10,6-8,CLE,Rajai Davis,Carl Edwards,-5,89,Single to CF (Line Drive); Guyer Scores
+Bottom 10,7-8,CLE,Michael Martinez,Mike Montgomery,11,100,Groundout: 3B-1B
