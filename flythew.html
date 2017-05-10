@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fly the W</title>
+    
+<!--    Load external CSS   -->
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+
+    
+    <style>
+        /* Style for Custom Tooltip */
+        div.tooltip {   
+            position: absolute;           
+            text-align: center;           
+            width: 200px;                  
+            height: 100px;                 
+            padding: 2px;             
+            font: 12px Gothic;        
+            background: lightgrey;   
+            border: 0px;      
+            border-radius: 8px;           
+            pointer-events: none;         
+        }
+    </style>
+    
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="Bubbles.js" charset="utf-8"></script>
+    <script src="dimmers.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        /* variables, javascript and D3 functions go here */
+        var data, topicData, histogram, bubbles;   // define a container variable to hold your data
+        
+        var div, margin = {
+                top: 40,
+                right: 40,
+                bottom: 40,
+                left: 40
+            },
+            // focus
+            heightF=740, widthF=1475,
+            xF = d3.scaleTime().range([0, widthF]),
+            yF,
+            // Context
+            widthT = 1475, heightT = 240,
+            x = d3.scaleTime().range([0, widthT]), y,
+            histogram, dataTotal, f,
+            xAxis, yAxis,
+            yAxisF,
+            minDate, maxDate,
+            minTweet, maxTweet, maxTweet2 = 100;
+        
+        var brush = d3.brushX()
+            .extent([[0, 0], [widthT, heightT]])
+            .on("brush end", brushed);
+
+        var zoom = d3.zoom()
+            .scaleExtent([1, Infinity])
+            .translateExtent([[0, 0], [widthT, heightT]])
+            .extent([[0, 0], [widthT, heightT]])
+            .on("zoom", zoomed);
+        
+        function onLoad() {
+//            bubbles = d3.select('#bubbles');
+//            f = bubbles.selectAll('#circles');
+            // Get Blog Data
+                getBlogData();
+                getData();
+            div = d3.select("body")
+		    .append("div")   
+    		.attr("class", "tooltip")               
+    		.style("opacity", 0);
+        }
+        
+        function getData() {
+            // Load in the Tweet-by-Topic Timeline
+//                d3.csv("Data/testTweets.csv", function(d) {
+                d3.csv("Data/tweets_by_time2.csv", function(d) {
+                    data = d;
+                // populate the dropdown with topics
+                    listTopics();
+                    });
+            // Load in the list of topic words.
+                d3.csv("Data/topicWords.csv", function(d){
+                    topicData = d;
+                });                
+            };
+        
+
+        // A function which returns a list of topics and adds them to a drop-down meny.
+        function listTopics() {
+            d3.select("#topics").selectAll("option")
+                    .data(d3.map(data, function(d){return d["lang.topic"];}).keys())
+                .enter()
+                .append("option")
+                .text(function(d){return d;})
+                .attr("value",function(d){return d;});
+        };
+        
+        // Interactively display the topics
+        function filter(key) {
+            // Dim the other topics, but bring the selected one to the fore.
+            dimAll();
+            d3.selectAll("."+key.replace(/\s/g, ''))
+                .style("opacity",0.8);
+            
+            // Remove existing terms...
+            d3.select("#topicTerms").selectAll("p")
+                .remove();
+            // ...And replace with the terms for the appropriate topic.
+            d3.select("#topicTerms")
+                .data(topicData.filter(
+                    function(d){
+                        return d["lang.topic"] == key
+                    }))
+                .append("p")
+                .text(function(d){
+                    return d.words;
+            })
+        }
+        
+        
+//        Brush and Zoom Technique adapted from Mike Bostock:
+//        https://bl.ocks.org/mbostock/34f08d5e11952a80609169b7917d4172
+        
+        function getBlogData(){        
+            d3.csv("Data/total_blog2.csv", function(d) {
+                dataTotal = d;
+                getMax();
+
+            });
+        };
+        
+        function getMax(){
+            maxDate = d3.max(dataTotal, function(d){return new Date(d.cst)});
+            minDate = d3.min(dataTotal, function(d){return new Date(d.cst)});
+            maxTweet = d3.max(dataTotal, function(d) {
+                return +d.tweets;
+              });
+            drawHist();
+        };
+        
+        function drawHist() {
+            // Append the 'context' svg - a time series of total twitter volume
+            histogram = d3.select('#contextTotal').append('svg')
+              .attr('class', 'context')
+              .attr('width', widthT)
+              .attr('height', heightT)
+              .append('g')
+              .attr('id','histogram')
+              .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+
+            // Sets the x scale (Time)
+            x = d3.scaleTime()
+              .domain([d3.timeMinute.offset(minDate,-1), d3.timeMinute.offset(maxDate, 1)])
+              .rangeRound([0, widthT - margin.left - margin.right]);
+            
+            // Sets the y- Scales (total tweets)
+            y = d3.scaleLinear()
+              .domain([0, maxTweet])
+              .range([heightT - margin.top - margin.bottom, 0]);
+            y2 = d3.scaleLinear()
+              .domain([0, maxTweet2])
+              .range([heightT - margin.top - margin.bottom, 0]);
+            
+            // Sets the X-Axis for the SVG
+            xAxis = d3.axisBottom(x)
+            //  .ticks(d3.timeMinute.every(30))
+            //  .tickFormat(d3.timeFormat("%B %d, %Y"))
+              .tickSize(10)
+              .tickPadding(8);
+            
+            // Sets the y-axis for the SVG
+            yAxis = d3.axisLeft(y)
+              .ticks(6)
+              .tickPadding(8);
+            
+            // add the Y gridlines
+            histogram.append("g")			
+              .attr("class", "gridline")
+              .call(function(){return yAxis
+                  .tickSize(-widthT+margin.left+margin.right)
+                  }
+                  )
+
+            // Select the context, and append a 
+            histogram.selectAll('.context')
+              .data(dataTotal)
+              .enter().append('rect')
+              .attr('class', 'bar')
+              .attr('id', function(d){return "z"+d.cst})
+              .attr('x', function(d) {
+                return x(new Date(d.cst));
+              })
+              .attr('y', function(d) {
+                return y(+d.tweets)
+              })
+              .attr('width', 2)
+              .attr('height', function(d) {
+                return heightT - margin.top - margin.bottom - y(+d.tweets)
+              })
+              .on("mouseover", function(d){
+                    //dimAll();
+                    addStory(this.id);
+                    d3.select(this)
+                      .style("opacity",1);
+                })
+              .on("mouseout", function(d){
+                    //showAll();
+                })
+              ;
+            
+            // Append the X and Y Axes
+            histogram.append('g')
+              .attr('class', 'axis axis--x')
+              .attr('transform', 'translate(0, ' + (heightT - margin.top - margin.bottom) + ')')
+              .call(xAxis);
+
+            histogram.append('g')
+              .attr('class', 'axis axis--y')
+              .call(yAxis);
+            
+            // Add the "Brush" to aid with zooming
+//            histogram.append('g')
+//                .attr('class','brush')
+//                .call(brush)
+//                .call(brush.move, xF.range())
+    };
+        
+        function addStory(id) {
+            var numb = id.slice(1)
+            var format = d3.timeFormat("%B %d %H:%M %p");
+            var temp = dataTotal.filter(
+                        function(d){
+                            return d.cst == numb
+                        });
+
+            d3.select("#headline").selectAll('H3').remove();
+            d3.select("#headline")
+                .append('H3')
+                .text(temp[0].header)
+
+            d3.select("#story").selectAll('p').remove();
+            d3.select("#story")
+                .append('p')
+                .text(format(new Date(temp[0].cst)));
+            d3.select("#story")
+                .append('p')
+                .text(temp[0].text);
+        }
+        
+//        function brushed() {
+//          if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
+//          var s = d3.event.selection || xF.range();
+//          xF.domain(s.map(xF.invert, x));
+////          f.select(".area").attr("d", area);
+//          f.select(".axis--x").call(xAxis);
+//          bubbles.select(".zoom").call(zoom.transform, d3.zoomIdentity
+//              .scale(widthT / (s[1] - s[0]))
+//              .translate(-s[0], 0));
+//        }
+//
+//        function zoomed() {
+//          if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
+//          var t = d3.event.transform;
+//          xF.domain(t.rescaleX(x).domain());
+////          f.select(".area").attr("d", area);
+//          f.select(".axis--x").call(xAxis);
+//          context.select(".brush").call(brush.move, xF.range().map(t.invertX, t));
+//        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <img src="http://content.sportslogos.net/logos/54/54/full/8xxnl877lmzglhb8e78h7f1h5.png" height="250" width="250">
+    <div id="titles">
+        <H1>FLY THE <mark>W</mark></H1>
+        <H2>How Chicago reacted to Game 7 of the 2017 World Series on Twitter</H2>
+    </div>
+    <div class="wrapper">
+        <div class="box sidebarL">
+                <div id="controls">
+                        <button onclick="drawBubbles()">Draw!</button> 
+
+<!--
+                        <H3>Change Count:</H3>
+                        <button onclick = "changeR('tweets')">Total Tweets</button>
+                        <button onclick = "changeR('tpu')">Tweets per User</button>
+-->
+                        <H3>Filter by topic:</H3>
+                        <select id="topics" onChange="filter(this.value)"></select>
+
+                </div>
+                <div id="topicTerms">
+                    <H3>Topic Terms</H3>
+                </div>
+        </div>
+        
+        <div class="box sidebarR">
+            <div id="headline">
+                <H3>Headline</H3>
+            </div>
+            <div id="story">
+                <p>Story</p>
+            </div>
+        </div>
+        
+        <div class="box focus" id="focusTweets">Bubble Content<br>
+<!--                <svg class="focus" id="bubbles" height="740" width="1475"></svg>-->
+        </div>
+        
+        <div class="box context" id="contextTotal">Total Twitter Volume<br>
+        </div>
+    </div>
+
+
+</body>
+</html>
