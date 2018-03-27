@@ -1,0 +1,141 @@
+/*  Declare custom Fonts - Similar to the Cubs' own.    */
+        @font-face {
+            font-family: Gothic;
+            src: url("./Fonts/GOTHIC.TTF") format("truetype");
+        }
+        @font-face {
+            font-family: GothicB;
+            src: url("./Fonts/GOTHICB0.TTF") format("truetype");
+        }
+            
+        h1{
+            font-family: GothicB;
+            font-size: 140px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        h2{
+            font-family: GothicB;
+            font-size: 60px;
+            margin: 0px;
+            padding: 0px;
+        }
+        h3,h4,h5,h6 {
+            font-family: GothicB;
+/*            font-size: 60px;*/
+            margin: 0px;
+/*            padding: 0px;*/
+        }
+        
+        mark {
+            color:#002F6C;
+            background-color: #fff;
+        }
+        
+        p{margin-top: 0px;}
+                
+        body {
+            font-family: Gothic;
+            margin: 10px;
+        }
+        
+        img{
+            float:left;
+            padding: 10px;
+            padding-left: 0px;
+            padding-right: 20px;
+        }
+                
+        .wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 250px 1500px 500px;
+            grid-template-areas:
+            "sidebarL focus sidebarR"
+            "sidebarL context sidebarR";
+            grid-template-rows: 800px 300px;
+            clear: left
+        }
+        
+        .header {
+            grid-area: header;
+        }
+        
+        .sidebarL {
+            grid-area: sidebarL;
+        }
+
+        .sidebarR {
+            grid-area: sidebarR;
+        }
+
+        .focus {
+            grid-area: focus;
+        }
+        
+        .context {
+            grid-area: context;
+        }
+        
+        .box {
+/*            background-color: #444;*/
+/*            color: #fff;*/
+            border: 2px solid #002F6C;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 150%;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #C8102E;
+            shape-rendering: crispEdges;
+        }
+  
+        .bar {
+            fill: #002F6C;
+/*            stroke: white;*/
+        }
+/*       Topic-Colors! Blues are less frequents, Greens mid, Reds are High volume per user */
+        .Spanish {fill:#3b3eac}
+        .Topic19-English {fill:#3366cc}
+        .Topic6-English {fill:#0099c6}
+        .Topic5-English {fill:#109618}
+        .Topic3-English {fill:#66aa00}
+        .Topic2-English {fill:#aaaa11}
+        .Topic4-English {fill:#e67300}
+        .Topic7-English {fill:#dd4477}
+        .Topic0-English {fill:#dc3912}
+        .Topic1-English {fill:#8b0707}
+
+  
+
+
+
+
+
+
+
+/*
+#3366cc
+#dc3912
+#ff9900
+#109618
+#990099
+#0099c6
+#dd4477
+#66aa00
+#b82e2e
+#316395
+#994499
+#22aa99
+#aaaa11
+#6633cc
+#e67300
+#8b0707
+#651067
+#329262
+#5574a6
+#3b3eac*/
